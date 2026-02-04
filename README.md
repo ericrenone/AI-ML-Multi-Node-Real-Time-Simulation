@@ -1,4 +1,4 @@
-# AI/ML Multi-Node Real-Time Simulation
+# Emergent Dynamics for AI/ML Multi-Node Systems
 
 ## Core
 - **Dynamic force/load distribution** across multiple nodes  
