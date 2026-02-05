@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Canonical AI/ML Multi-Node Simulation
 3D Real-Time Dynamic Forces Visualization with Attention
 
 This module simulates dynamic force distribution across multiple nodes,
@@ -123,3 +122,4 @@ def plot_3d_realtime():
 # ---------------- Main ----------------
 if __name__ == "__main__":
     plot_3d_realtime()
+
