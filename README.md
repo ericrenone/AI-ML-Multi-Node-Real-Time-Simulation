@@ -1,35 +1,25 @@
-# Seeded Financial Market Simulator
+# Geometric-Liquidity-Dynamics (GLD)
 
-Physics-inspired, reproducible market simulation engine designed for finance professionals, quants, and data scientists. It generates synthetic price trajectories, incorporating stochastic noise, momentum dynamics, and realistic market constraints, with full auditability.
+**Geometric-Liquidity-Dynamics (GLD)** is a small, self-contained, deterministic financial simulator.  
+
+It is **not intended for live trading**, but it is extremely valuable for:
+
+- **Strategy Validation** – Test trading strategies in a reproducible environment.  
+- **Quantitative Research** – Generate synthetic market data for modeling and experimentation.  
+- **Risk Modeling** – Evaluate volatility, drawdowns, and other portfolio risk metrics.  
+- **Educational Purposes** – Learn financial dynamics, stochastic processes, and simulation techniques.
+
+Think of it as a **physics-informed Monte Carlo engine**:  
+prices evolve according to momentum, mean-reversion, and stochastic noise, fully auditable and reproducible.
 
 ---
 
 ## Features
 
-- **Reproducible Randomness:**  
-  Seeded random noise ensures that every simulation is **fully reproducible**, critical for backtesting, auditing, and regulatory compliance.
+- Seeded randomness for **deterministic simulations**  
+- Symplectic physics-inspired price dynamics  
+- Risk guardrails to prevent unrealistic price jumps  
+- Finance-ready metrics: returns, annualized volatility, max drawdown  
+- Audit-ready reporting for verification and compliance
 
-- **Symplectic Physics-Inspired Updates:**  
-  Price evolution is driven by momentum-like updates:
-  - `q` represents the price level.
-  - `p` represents price momentum.
-  This captures realistic market behavior such as gradual price adjustments and oscillations.
-
-- **Stochastic Noise Injection:**  
-  Randomized shocks are added to each tick while preserving underlying trends, simulating real-world market volatility.
-
-- **Risk Guardrails:**  
-  Momentum (`p`) is capped to prevent unrealistic jumps, analogous to circuit breakers in financial markets.
-
-- **Institutional-Grade Metrics:**  
-  Calculates:
-  - Daily returns
-  - Annualized volatility
-  - Maximum drawdown  
-  Output is formatted for **finance-ready reporting**.
-
-- **Audit-Ready Output:**  
-  Each simulation logs the master seed and key metrics, ensuring traceability and verifiable results.
-
-
-
+---
