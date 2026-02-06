@@ -1,24 +1,35 @@
-# Logic & Utility
+# MasterSeedEngine: Seeded Financial Market Simulator
 
-## 1. Geometric Price Discovery
-Traditional models exhibit numerical drift under high volatility. This engine uses **Symplectic Integration** to maintain price evolution on the information manifold.
+Physics-inspired, reproducible market simulation engine designed for finance professionals, quants, and data scientists. It generates synthetic price trajectories, incorporating stochastic noise, momentum dynamics, and realistic market constraints, with full auditability.
 
-- Price (`q`) deviates toward equilibrium (`Target`) according to **Manifold Stiffness** (`k`), generating mean-reverting oscillations consistent with observed asset behavior.
+---
 
-## 2. Momentum-Based Risk Management
-Liquidity momentum is represented by `p`. Extreme events (e.g., flash crashes, short squeezes) cause momentum spikes.
+## Features
 
-- **Hard Momentum Clipping** (`±20`) enforces **Market Depth Limits**, preventing unbounded price changes and broken trades.
+- **Reproducible Randomness:**  
+  Seeded random noise ensures that every simulation is **fully reproducible**, critical for backtesting, auditing, and regulatory compliance.
 
-## 3. Deterministic Stress Testing
-A **Master Seed** converts stochastic noise into a deterministic, reproducible sequence.
+- **Symplectic Physics-Inspired Updates:**  
+  Price evolution is driven by momentum-like updates:
+  - `q` represents the price level.
+  - `p` represents price momentum.
+  This captures realistic market behavior such as gradual price adjustments and oscillations.
 
-- **Backtesting:** 1,000 market scenarios generated via seed variation.  
-- **Reproducibility:** Specific failure states can be recreated to calibrate `k` and `p`.
+- **Stochastic Noise Injection:**  
+  Randomized shocks are added to each tick while preserving underlying trends, simulating real-world market volatility.
 
-## 4. Quantitative Performance Metrics
-The engine computes key risk metrics:
+- **Risk Guardrails:**  
+  Momentum (`p`) is capped to prevent unrealistic jumps, analogous to circuit breakers in financial markets.
 
-- **Annualized Volatility:** Standard deviation of returns scaled to a trading year.  
-- **Max Drawdown (MDD):** Largest peak-to-trough capital decline.  
-- **Symplectic Stability:** Verification of long-horizon numerical stability (1,000+ rounds).
+- **Institutional-Grade Metrics:**  
+  Calculates:
+  - Daily returns
+  - Annualized volatility
+  - Maximum drawdown  
+  Output is formatted for **finance-ready reporting**.
+
+- **Audit-Ready Output:**  
+  Each simulation logs the master seed and key metrics, ensuring traceability and verifiable results.
+
+
+
