@@ -1,4 +1,4 @@
-Seeded Financial Market Simulator
+# Seeded Financial Market Simulator
 
 Physics-inspired, reproducible market simulation engine designed for finance professionals, quants, and data scientists. It generates synthetic price trajectories, incorporating stochastic noise, momentum dynamics, and realistic market constraints, with full auditability.
 
